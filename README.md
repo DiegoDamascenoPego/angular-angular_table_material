@@ -10,7 +10,7 @@ Ele disponiniliza forma para o desenvolvedor customizar os campos e formatar os 
 
 ![](mat-table-example.gif)
 
-## Features
+## Recursos
 
 Recursos disponíveis
 
