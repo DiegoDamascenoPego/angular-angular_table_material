@@ -63,8 +63,7 @@ displayedColumns: Column[] = [
 
 ```
 ### Importar componente 
-```
-    <app-table
+```    <app-table
       [dataSource]="dataSource"
       [displayedColumns]="displayedColumns"
       (edit)="onEdit($event)"
