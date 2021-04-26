@@ -117,3 +117,14 @@ displayedColumns: Column[] = [
     </app-table>
 ```
 
+### Estilização de colunas
+Uma forma de estilizar o conteúdo das colunas foi disponibilizado no componente através **TypeStyle**
+* Alinhar conteúdo
+  * TCENTER
+  * TRIGHT
+  * TLEFT
+* Tamanho máximo de conteúdo
+  * W75
+  * W100
+  * W300
+  * W400
