@@ -72,17 +72,10 @@ Recursos disponíveis
 ## Como usar
 ### Definir displayedColumns
 ```
-displayedColumns: Column[] = [
+ displayedColumns: Column[] = [
     new ColumnStatus("status", "Situação", [TypeStyle.W100, TypeStyle.TCENTER], TypeField.STATUS),
-    {
-      definition: "cliente", type: TypeField.TEXT, header: "Nome",
-      get(row: any, col: Column): string { return row[col.definition].nome },
-    },
-    {
-      definition: "animal", type: TypeField.TEXT, header: "Animal", style: [TypeStyle.W200],
-      get(row: any, col: Column): string { return row[col.definition].nome },
-    },
-
+    new ColumnEntity("cliente", "Nome"),
+    new ColumnEntity("animal", "Animal"),
     new Columns("telefones", "Telefones", [TypeStyle.W150], TypeField.PHONE),
     new Columns("data", "Data", [TypeStyle.W200, TypeStyle.TCENTER], TypeField.DATETIME),
     new Columns("observacao", "Observação"),
@@ -100,7 +93,7 @@ displayedColumns: Column[] = [
   pageOne: Atendimento[] = [];
   
   ngOnInit(): void {
-    this.dataSource = new MatTableDataSource<Atendimento>(this.pageTwo);
+    this.dataSource = new MatTableDataSource<Atendimento>(this.pageOne);
   }
 
 ```
