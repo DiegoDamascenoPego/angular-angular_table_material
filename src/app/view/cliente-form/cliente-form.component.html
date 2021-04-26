@@ -1,14 +1,11 @@
-<app-cliente-form></app-cliente-form>
-
 <mat-card>
   <mat-card-title>
-    <h1> Lista de Atendimento</h1>
+    <h1> Lista de Clientes</h1>
   </mat-card-title>
   <mat-card-content>
     <app-table
       [dataSource]="dataSource"
       [displayedColumns]="displayedColumns"
-      (confirm)="onConfirm($event)"
       (edit)="onEdit($event)"
       (delete)="onDelete($event.id, $event.nome)"
       [pageIndex]="pageIndex"
@@ -18,4 +15,3 @@
     </app-table>
   </mat-card-content>
 </mat-card>
-<router-outlet></router-outlet>

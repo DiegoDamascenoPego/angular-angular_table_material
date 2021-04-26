@@ -5,8 +5,7 @@
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
-    "strict": true,
-    "noImplicitReturns": true,
+    "strict": false,
     "noFallthroughCasesInSwitch": true,
     "sourceMap": true,
     "declaration": false,
@@ -14,10 +13,12 @@
     "experimentalDecorators": true,
     "moduleResolution": "node",
     "importHelpers": true,
+    "noImplicitAny": false,
+    "noImplicitReturns": false,
+    "module": "esnext",
     "target": "es2015",
-    "module": "es2020",
     "lib": [
-      "es2018",
+      "es2016",
       "dom"
     ]
   },
