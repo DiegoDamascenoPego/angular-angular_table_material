@@ -16,13 +16,55 @@ Recursos disponíveis
 
 * Definição de colunas
   * Column
+    > Utilizado para colunas simples sem a necessidade de customização
   * ColumnStatus
+    > Utilizado para definir colunas de status conforme especificado **TypeStatus**
   * ColumnEntity
+    > utilizado para mostrar campos de uma entidade associada  exemplo:
+    ```
+    
+    export interface Cliente {
+      id: number;
+      nome: string;
+      ativo: boolean;
+    }
+    
+    export interface Atendimento {
+      cliente: Cliente;
+    }        
+    
+    displayedColumns: Column[] = [
+      new ColumnEntity("cliente", "Nome"),
+      new ColumnEntity("animal", "Animal"),
+    ];
+    
+    ```
   * ColumnAction
+  > Utilizado para definir com coluna de Ação conforme **TypeAction**
   * ColumnMask
-   
+  > Utilizado para definir tipo de mascara que o resultado deve ser apresentado na **tabela**
+  > Recurso realizado apartir de [ngx-mask](https://www.npmjs.com/package/ngx-mask)
+* Formatação de colunas 
+> A colunas são renderizadas conforme seu tipo definido por **TypeField**
+* TEXT
+> Formato padrão de define o resultado conforme definido pela entidade
+* NUMBER
+> Formato utiliza o DecimalPipe
+* CURRENCY
+> Formato utiliza o CurrencyPipe
+* PERCENT
+> Formato utiliza o PercentPipe
+* DATETIME
+>  Formato utiliza DatePipe com format **dd/MM/yyyy hh:mm**
+* ACTION
+> Define que a coluna referência um status conforme **TypeAction**
+* PHONE
+> Formato utiliza MaskPipe
+* STATUS
+> Define que a coluna referência um status conforme **TypeField**
+  
 * Paginação
-* Actions
+* Ações
   * Confirmar
   * Editar
   * Excluir
