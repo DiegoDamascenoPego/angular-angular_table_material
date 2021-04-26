@@ -2,7 +2,7 @@
 
 Projeto utiliza [Angular CLI](https://github.com/angular/angular-cli) version 11.0.1.
 
-# Component Table material
+# Component Table
 
 O componente desenvolvido possui a finalidade de demonstrar o uso de colunas personalizaveis em um mat-table, sendo recomendado seu para telas de lista de resgistros anexadas a rotina de cadastros.
 
